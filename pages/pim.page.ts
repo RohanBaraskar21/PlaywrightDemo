@@ -16,7 +16,7 @@ export class PIMPage {
   }
 
   async goto() {
-    await this.page.goto(`${this.baseUrl}/index.php/pim/viewPimModule`);
+    await this.page.goto(`${this.baseUrl}/index.php/pim/viewPimModule`, { timeout: 20000 });
   }
 
   async clickAddEmployee() {

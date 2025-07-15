@@ -14,7 +14,7 @@ export class LeavePage {
   }
 
   async goto() {
-    await this.page.goto(`${this.baseUrl}/index.php/leave/viewLeaveModule`);
+    await this.page.goto(`${this.baseUrl}/index.php/leave/viewLeaveModule`, { timeout: 20000 });
   }
 
   async clickApplyLeave() {

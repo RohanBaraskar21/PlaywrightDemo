@@ -17,9 +17,9 @@ export class AdminPage {
     this.addButton = page.locator('button:has-text("Add")');
   }
 
-  async goto() {
-    await this.page.goto(`${this.baseUrl}/index.php/admin/viewAdminModule`);
-  }
+async goto() {
+  await this.page.goto(`${this.baseUrl}/index.php/admin/viewAdminModule`, { timeout: 20000 });
+}
 
   async searchUser(username: string) {
     await this.searchInput.fill(username);
